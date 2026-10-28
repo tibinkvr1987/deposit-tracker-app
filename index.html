@@ -248,7 +248,7 @@ function render(){
     {label:'Pending',get:r=>r.type,sort:r=>r.type},
     {label:'Amount',get:r=>fm(r.amt),sort:r=>r.amt,cls:r=>r.amt<-0.005?'pos':'neg'},
     {label:'Remarks',get:r=>esc(r.rem)||'<span class="sub">— none given —</span>',sort:r=>r.rem,l:1}
-  ],P,`<td colspan="3">Total (net of excess)</td><td class="${pTot<-0.005?'pos':'neg'}">${fm(pTot)}</td><td></td>`);
+  ],P,`<td colspan="3">Total_Short</td><td class="${pTot<-0.005?'pos':'neg'}">${fm(pTot)}</td><td></td>`);
 
   renderMonth();
   renderEntry(R);

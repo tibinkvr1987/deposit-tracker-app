@@ -854,7 +854,11 @@ const canBr=c=>admin||role===c;
 const SITES=BR.map(b=>b[0]);
 let sales={},deps={},admin=false,canWrite=false,role=localStorage.getItem('role')||'';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
+const d1 = document.getElementById("d1");
+if (d1) {
+    const today = new Date();
+    d1.value = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-01`;
+}
 // ---- Theme Switcher Logic (Light / Dark / Colourful) ----
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme', t);

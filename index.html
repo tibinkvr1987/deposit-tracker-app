@@ -87,7 +87,7 @@
   --ws-badge-bg: rgba(139, 92, 246, 0.22);
 }
 
-/* ==================== THEME 3: LIGHT (Crisp Daylight UI) ==================== */
+
 :root[data-theme="light"] {
   --bg: #eef2f7;
   --bg-grad: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
@@ -176,7 +176,7 @@ h2 {
   letter-spacing: 0.01em;
 }
 
-/* ==================== HERO CARD & TOP-RIGHT THEME SWITCHER ==================== */
+
 .hero-card {
   background: var(--hero-bg);
   border: 1px solid var(--hero-bd);
@@ -222,7 +222,7 @@ h2 {
   line-height: 1.45;
 }
 
-/* Theme Switcher Pill Bar in the Top-Right Blank Space */
+
 .theme-box {
   display: flex;
   align-items: center;
@@ -312,7 +312,7 @@ h2 {
   font-weight: 500;
 }
 
-/* ==================== GENERAL CARDS & ALERT BANNER ==================== */
+
 .card {
   background: linear-gradient(145deg, var(--card-hi), var(--card));
   border: 1px solid var(--bd);
@@ -355,7 +355,7 @@ h2 {
   border-left: 5px solid #f59e0b;
 }
 
-/* ==================== DISTINCT KPI CARDS (CASH vs WHOLESALE) ==================== */
+
 .kpis {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -383,7 +383,7 @@ h2 {
   background: var(--cash-bg);
   border-color: var(--cash-bd);
 }
-/* Row 2 KPIs: Wholesale (Royal Purple Tint) */
+
 .k.ws-k {
   background: var(--ws-bg);
   border-color: var(--ws-bd);
@@ -437,7 +437,7 @@ h2 {
 .k.ws-k b { color: var(--ws-ac); }
 .k b.neg { color: var(--wa) !important; }
 
-/* ==================== DISTINCT BRANCH-WISE PANELS (PICTURE 2 REDESIGN) ==================== */
+
 .two-col {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -543,7 +543,7 @@ h2 {
 .panel.cash .stat-chip b { color: var(--cash-ac); }
 .panel.ws .stat-chip b { color: var(--ws-ac); }
 
-/* Site Code Badges inside Cash vs Wholesale Tables */
+
 .site-badge {
   display: inline-block;
   padding: 2px 7px;
@@ -570,7 +570,7 @@ h2 {
 #ct tbody tr:hover td { background: rgba(52, 211, 153, 0.14); }
 #wt tbody tr:hover td { background: rgba(167, 139, 250, 0.14); }
 
-/* ==================== TABLES & CONTROLS ==================== */
+
 .wrap { overflow-x: auto; }
 table {
   border-collapse: collapse;
@@ -688,7 +688,7 @@ textarea {
   color: var(--mut);
 }
 
-/* ==================== PRINT STYLES ==================== */
+
 .print-only { display: none; }
 .print-header { font-size: 16px; font-weight: 700; text-align: center; margin: 0 0 2px; color: #111; }
 .approval-wrap { margin-top: 10px; border: 1px solid #2a3f6e; border-radius: 7px; overflow: hidden; break-inside: avoid; }
@@ -737,7 +737,6 @@ textarea {
       <div class="sub-desc">Sales entered by Finance · Branches record bank deposits and delay reasons · Data synced via GitHub</div>
     </div>
 
-    <!-- Theme Selector placed in the top-right blank space -->
     <div class="theme-box">
       <span class="theme-lbl">Theme</span>
       <div class="theme-switcher" id="themeSwitcher">
@@ -761,7 +760,6 @@ textarea {
   </div>
 </div>
 
-<!-- 3x2 KPI Grid (Row 1 = Emerald Cash, Row 2 = Purple Wholesale) -->
 <div class="kpis" id="kpis"><div class="k cash-k"><span>💵 Cash sales</span><b>4,409,930.52</b></div>
     <div class="k cash-k"><span>💵 Deposited in bank (Cash)</span><b>4,335,819.22</b><div class="bar"><i style="width:98.31944517801614%"></i></div><span>98.3% of cash sales</span></div>
     <div class="k cash-k"><span>💵 Excess/Short (Cash)</span><b class="neg">-69,980.82</b></div>

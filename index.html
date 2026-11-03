@@ -3075,7 +3075,7 @@ function render(){
    `<div class="k cash-k"><span>💵 Cash sales</span><b>${fm(csGross)}</b></div>
     <div class="k cash-k"><span>💵 Deposited in bank (Cash)</span><b>${fm(cd)}</b><div class="bar"><i style="width:${pctC}%"></i></div><span>${pctC.toFixed(1)}% of cash sales</span></div>
     <div class="k cash-k"><span>💵 Excess/Short (Cash)</span><b class="${pc>0.005?'neg':''}">${fm(-pc)}</b></div>
-    <div class="k ws-k"><span>📦 Wholesale sales</span><b>${fm(ws)}<b></div>
+    <div class="k ws-k"><span>📦 Wholesale sales</span><b>${fm(ws)}</b></div>
     <div class="k ws-k"><span>📦 Deposited in bank (WS)</span><b>${fm(wd)}</b><div class="bar"><i style="width:${pctW}%"></i></div><span>${pctW.toFixed(1)}% of wholesale</span></div>
     <div class="k ws-k"><span>📦 Variance (Wholesale)</span><b class="${pw>0.005?'neg':''}">${fm(-pw)}<b></div>`;
 

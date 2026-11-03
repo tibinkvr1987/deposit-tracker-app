@@ -733,7 +733,7 @@ textarea {
         <h1>Branch Cash &amp; Wholesale Deposit Tracker</h1>
         <span class="amber-badge" id="st" style="background: linear-gradient(145deg, rgb(252, 211, 77), rgb(245, 158, 11)); color: rgb(42, 18, 5);">Live · updated 16:41:22 · Finance</span>
       </div>
-      <div class="sub-desc">Sales entered by Finance · Branches record bank deposits and delay reasons · Data synced via GitHub</div>
+      <div class="sub-desc">Sales entered by Finance · Branches record bank deposits and delay reasons </div>
     </div>
 
     <div class="theme-box">
@@ -3073,11 +3073,11 @@ function render(){
 
   $('kpis').innerHTML=
    `<div class="k cash-k"><span>💵 Cash sales</span><b>${fm(csGross)}</b></div>
-    <div class="k cash-k"><span>💵 Deposited in bank (Cash)</span><b>${fm(cd)}</b><div class="bar"><i style="width:${pctC}%"></i></div><span>${pctC.toFixed(1)}% of cash sales</span></div>
-    <div class="k cash-k"><span>💵 Excess/Short (Cash)</span><b class="${pc>0.005?'neg':''}">${fm(-pc)}</b></div>
+    <div class="k cash-k"><span>💵 Deposited in bank (Cash)</span></b>${fm(cd)}</b><div class="bar"><i style="width:${pctC}%"></i></div><span>${pctC.toFixed(1)}% of cash sales</span></div>
+    <div class="k cash-k"><span>💵 Excess/Short (Cash)</span></b class="${pc>0.005?'neg':''}">${fm(-pc)}</b></div>
     <div class="k ws-k"><span>📦 Wholesale sales</span><b>${fm(ws)}</b></div>
-    <div class="k ws-k"><span>📦 Deposited in bank (WS)</span><b>${fm(wd)}</b><div class="bar"><i style="width:${pctW}%"></i></div><span>${pctW.toFixed(1)}% of wholesale</span></div>
-    <div class="k ws-k"><span>📦 Variance (Wholesale)</span><b class="${pw>0.005?'neg':''}">${fm(-pw)}</b></div>`;
+    <div class="k ws-k"><span>📦 Deposited in bank (WS)</span></b>${fm(wd)}</b><div class="bar"><i style="width:${pctW}%"></i></div><span>${pctW.toFixed(1)}% of wholesale</span></div>
+    <div class="k ws-k"><span>📦 Variance (Wholesale)</span></b class="${pw>0.005?'neg':''}">${fm(-pw)}</b></div>`;
 
   // Populate summary chips inside the Branch Wise Cash & Wholesale Panel Headers
   if($('cashPanelStats')){
@@ -3137,7 +3137,7 @@ function render(){
     {label:'Amount',get:r=>fm(r.amt),sort:r=>r.amt,cls:r=>r.amt<-0.005?'pos':'neg'},
     {label:'No. of Days',get:r=>`${r.days} ${r.days===1?'day':'days'}`,sort:r=>r.days,cls:r=>r.days>1?'neg':''},
     {label:'Remarks',get:r=>esc(r.rem)||'<span class="sub">— none given —</span>',sort:r=>r.rem,l:1}
-  ],P,`<td colspan="3" class="l">Total (net of excess)</td><td class="${pTot<-0.005?'pos':'neg'}">${fm(pTot)}</td><td></td><td></td>`);
+  ],P,`<td colspan="3" class="l">Total_Pending</td><td class="${pTot<-0.005?'pos':'neg'}">${fm(pTot)}</td><td></td><td></td>`);
 
   renderMonth();
   renderEntry(R);

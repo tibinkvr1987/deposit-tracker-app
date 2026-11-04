@@ -126,6 +126,7 @@
   --ws-ac: #5b21b6;
   --ws-row-alt: rgba(124, 58, 237, 0.06);
   --ws-badge-bg: #ddd6fe;
+  
 }
 
 * { box-sizing: border-box; }
@@ -697,6 +698,21 @@ textarea {
 .msg {
   font-size: 12px;
   color: var(--mut);
+
+  /* Force high-contrast text inside tables and panels during Light Mode */
+:root[data-theme="light"] .panel table td,
+:root[data-theme="light"] .panel table th,
+:root[data-theme="light"] .panel b,
+:root[data-theme="light"] .panel span {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .panel.cash th {
+  color: #064e3b !important;
+}
+
+:root[data-theme="light"] .panel.ws th {
+  color: #3b0764 !important;
 }
 
 
